@@ -1,0 +1,22 @@
+{
+  "name": "avicenna-ai-backend",
+  "version": "1.0.0",
+  "description": "Avicenna.AI Backend - AI-powered test cases generation backend with Google authentication",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "avicenna-ai",
+    "test-cases",
+    "ai",
+    "generator",
+    "google-auth",
+    "mongodb",
+    "backend"
+  ],
+  "author": "Avicenna.AI Team",
+  "license": "MIT"
+}

@@ -1,0 +1,85 @@
+{
+  "name": "avicenna-ai-test-generator",
+  "version": "1.0.0",
+  "description": "Avicenna.AI - AI-powered test cases generation system with Google authentication, MongoDB user management, and community guidelines enforcement",
+  "type": "module",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "node backend/server.js",
+    "backend:dev": "nodemon backend/server.js",
+    "frontend": "cd frontend && react-scripts start",
+    "frontend:build": "cd frontend && react-scripts build",
+    "frontend:test": "cd frontend && react-scripts test",
+    "build": "npm run frontend:build",
+    "test": "npm run frontend:test",
+    "install:all": "npm install && cd frontend && npm install",
+    "clean": "rm -rf node_modules frontend/node_modules backend/node_modules",
+    "setup": "npm run clean && npm run install:all"
+  },
+  "dependencies": {
+    "@google/genai": "^1.24.0",
+    "@google/generative-ai": "^0.24.1",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "google-auth-library": "^9.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.19.2",
+    "multer": "^1.4.5-lts.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "avicenna-ai",
+    "test-cases",
+    "ai",
+    "generator",
+    "google-auth",
+    "mongodb",
+    "react",
+    "gemini",
+    "test-automation"
+  ],
+  "author": "Avicenna.AI Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/avicenna-ai-test-generator.git"
+  },
+  "homepage": "https://avicenna-ai-test-generator.herokuapp.com",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000"
+}

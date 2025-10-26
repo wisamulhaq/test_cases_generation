@@ -1,7 +1,7 @@
 {
-  "name": "avicenna-ai-backend",
+  "name": "biruni-ai-backend",
   "version": "1.0.0",
-  "description": "Avicenna.AI Backend - AI-powered test cases generation backend with Google authentication",
+  "description": "Biruni.AI Backend - AI-powered test cases generation backend with Google authentication",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [
-    "avicenna-ai",
+    "biruni-ai",
     "test-cases",
     "ai",
     "generator",
@@ -17,6 +17,6 @@
     "mongodb",
     "backend"
   ],
-  "author": "Avicenna.AI Team",
+  "author": "Biruni.AI Team",
   "license": "MIT"
 }

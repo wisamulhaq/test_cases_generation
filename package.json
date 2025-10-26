@@ -1,7 +1,7 @@
 {
-  "name": "avicenna-ai-test-generator",
+  "name": "biruni-ai-test-generator",
   "version": "1.0.0",
-  "description": "Avicenna.AI - AI-powered test cases generation system with Google authentication, MongoDB user management, and community guidelines enforcement",
+  "description": "Biruni.AI - AI-powered test cases generation system with Google authentication, MongoDB user management, and community guidelines enforcement",
   "type": "module",
   "main": "backend/server.js",
   "scripts": {
@@ -42,7 +42,7 @@
     "nodemon": "^3.0.1"
   },
   "keywords": [
-    "avicenna-ai",
+    "biruni-ai",
     "test-cases",
     "ai",
     "generator",
@@ -52,7 +52,7 @@
     "gemini",
     "test-automation"
   ],
-  "author": "Avicenna.AI Team",
+  "author": "Biruni.AI Team",
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0",
@@ -60,9 +60,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/avicenna-ai-test-generator.git"
+    "url": "https://github.com/your-username/biruni-ai-test-generator.git"
   },
-  "homepage": "https://avicenna-ai-test-generator.herokuapp.com",
+  "homepage": "https://biruni-ai-test-generator.herokuapp.com",
   "eslintConfig": {
     "extends": [
       "react-app",

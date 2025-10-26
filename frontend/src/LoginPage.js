@@ -87,7 +87,7 @@ const LoginPage = ({ onLoginSuccess }) => {
       <div className="login-card">
         <div className="login-header">
           <div className="logo-section">
-            <h1 className="app-title">Avicenna.AI</h1>
+            <h1 className="app-title">Biruni.AI</h1>
             <p className="app-subtitle">AI-Powered Test Case Generation Platform</p>
           </div>
         </div>

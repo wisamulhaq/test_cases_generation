@@ -864,7 +864,7 @@ const TestCasesGenerator = () => {
       {currentTab === 'form' && (
         <>
           <div className="header">
-            <h1>Avicenna.AI</h1>
+            <h1>Biruni.AI</h1>
             <p>Transform your requirements into comprehensive test cases with the power of artificial intelligence</p>
             
             {/* Backend Status Indicator */}

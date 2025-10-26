@@ -1,4 +1,4 @@
-# Avicenna.AI Test Cases Generator
+# Biruni.AI Test Cases Generator
 
 An AI-powered test case generation system with Google authentication, MongoDB user management, and community guidelines enforcement.
 

@@ -1008,6 +1008,15 @@ const TestCasesGenerator = () => {
                 <p style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '0.25rem', color: 'var(--text-primary)' }}>
                   {isDragOver ? 'Drop your images here!' : 'Drop your mock images here or click to browse'}
                 </p>
+                <p
+              style={{
+              fontSize: '0.85rem',
+              color: 'rgba(255, 255, 255, 0.6)', // light color for dark theme
+              margin: 0,
+  }}
+> Uploading too many images together can trigger rate limiting. Check limits with your provider.
+</p>
+
               </div>
             
             <input
@@ -1030,19 +1039,6 @@ const TestCasesGenerator = () => {
                         ({image.size})
                       </span>
                     </div>
-                    <textarea
-                      className="form-textarea"
-                      placeholder="Instructions for this image..."
-                      value={image.instructions}
-                      onChange={(e) => handleImageInstructionChange(image.id, e.target.value)}
-                      rows={1}
-                    />
-                    <button
-                      className="remove-image-btn"
-                      onClick={() => removeImage(image.id)}
-                    >
-                      🗑️ Remove
-                    </button>
                   </div>
                 ))}
               </div>
@@ -1447,7 +1443,7 @@ const TestCasesGenerator = () => {
                   color: 'white'
                 }}
               >
-                🗑️ Clear & Generate New
+                🗑️ Confirm
               </button>
             </div>
           </div>
@@ -1580,7 +1576,11 @@ const TestCasesGenerator = () => {
     {/* Floating Action Button for Query Optimizer */}
     <button
       className="floating-action-btn"
-      onClick={() => setShowQueryOptimizer(true)}
+      onClick={() => {
+        setShowQueryOptimizer(true);
+        setShowNotification(false); // Close any existing notifications
+        setShowWelcomePopup(false); // Close welcome popup
+      }}
       title="Open Query Optimizer"
     >
       👨‍⚕️

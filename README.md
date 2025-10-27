@@ -1,6 +1,11 @@
 # Biruni.AI Test Cases Generator
 
 An AI-powered test case generation system with Google authentication, MongoDB user management, and community guidelines enforcement.
+<img width="1699" height="982" alt="image" src="https://github.com/user-attachments/assets/4f1d42a7-2b32-4e33-a41c-1cc5ec6a2903" />
+<img width="1699" height="918" alt="image" src="https://github.com/user-attachments/assets/d82cec02-a3a8-4b7f-8936-7f5be14379ce" />
+
+
+
 
 ## 🎯 About
 

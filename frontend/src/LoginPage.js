@@ -1,7 +1,6 @@
 import  { useState, useEffect } from 'react';
-import dotenv from 'dotenv';
-dotenv.config();
-const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+
+const GOOGLE_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const LoginPage = ({ onLoginSuccess }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');

@@ -1,5 +1,7 @@
 import  { useState, useEffect } from 'react';
-
+import dotenv from 'dotenv';
+dotenv.config();
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const LoginPage = ({ onLoginSuccess }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -15,7 +17,7 @@ const LoginPage = ({ onLoginSuccess }) => {
     script.onload = () => {
       // Initialize Google Sign-In
       window.google.accounts.id.initialize({
-        client_id: '203148057775-p7us8cim7gio95jkf6vj8jmeivvij3to.apps.googleusercontent.com', // TODO: Replace with your actual client ID
+        client_id: GOOGLE_CLIENT_ID, // TODO: Replace with your actual client ID
         callback: handleGoogleLogin,
         auto_select: false,
         cancel_on_tap_outside: true,

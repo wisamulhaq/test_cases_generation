@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BASE_URL } from './constants';
 
 const QueryOptimizerPanel = ({ isOpen, onClose, authToken, showNotification }) => {
   const [formData, setFormData] = useState({
@@ -31,7 +30,7 @@ const QueryOptimizerPanel = ({ isOpen, onClose, authToken, showNotification }) =
     setError('');
 
     try {
-      const response = await fetch(`${BASE_URL}/api/optimize-query`, {
+      const response = await fetch('http://localhost:5000/api/optimize-query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,5 +1,4 @@
 import  { useState, useEffect } from 'react';
-import { BASE_URL } from './constants';
 
 const GOOGLE_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const LoginPage = ({ onLoginSuccess }) => {
@@ -49,7 +48,7 @@ const LoginPage = ({ onLoginSuccess }) => {
     setError('');
 
     try {
-      const result = await fetch(`${BASE_URL}/api/auth/google`, {
+      const result = await fetch('http://localhost:5000/api/auth/google', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

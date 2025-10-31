@@ -3,9 +3,10 @@ import './index.css';
 import LoginPage from './LoginPage';
 import BlockedUserPage from './BlockedUserPage';
 import QueryOptimizerPanel from './QueryOptimizerPanel';
+import { BASE_URL } from './constants';
 
 // API Base URL
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = `${BASE_URL}/api`;
 
 const TestCasesGenerator = () => {
   // Authentication state
@@ -193,7 +194,7 @@ const TestCasesGenerator = () => {
   // Check backend connection
   const checkBackendConnection = async () => {
     try {
-      const response = await fetch('http://localhost:5000/health', {
+      const response = await fetch(`${BASE_URL}/health`, {
         method: 'GET',
         signal: AbortSignal.timeout(5000) // 5 second timeout
       });

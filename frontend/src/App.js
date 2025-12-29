@@ -4,8 +4,10 @@ import LoginPage from './LoginPage';
 import BlockedUserPage from './BlockedUserPage';
 import QueryOptimizerPanel from './QueryOptimizerPanel';
 
-// API Base URL
-const API_BASE_URL = 'http://localhost:5000/api';
+// API Base URL - dynamically set based on environment
+const API_BASE_URL = process.env.REACT_APP_API_URL 
+  ? `${process.env.REACT_APP_API_URL}/api`
+  : 'http://localhost:5000/api';
 
 const TestCasesGenerator = () => {
   // Authentication state
@@ -193,7 +195,11 @@ const TestCasesGenerator = () => {
   // Check backend connection
   const checkBackendConnection = async () => {
     try {
-      const response = await fetch('http://localhost:5000/health', {
+      const healthURL = process.env.REACT_APP_API_URL 
+        ? `${process.env.REACT_APP_API_URL}/health`
+        : 'http://localhost:5000/health';
+      
+      const response = await fetch(healthURL, {
         method: 'GET',
         signal: AbortSignal.timeout(5000) // 5 second timeout
       });

@@ -1,6 +1,8 @@
 import  { useState, useEffect } from 'react';
 
-const GOOGLE_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
 const LoginPage = ({ onLoginSuccess }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -48,7 +50,7 @@ const LoginPage = ({ onLoginSuccess }) => {
     setError('');
 
     try {
-      const result = await fetch('http://localhost:5000/api/auth/google', {
+      const result = await fetch(`${API_BASE_URL}/api/auth/google`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
